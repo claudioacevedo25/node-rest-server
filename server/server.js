@@ -2,13 +2,19 @@ require('./config/config')
 
 const express = require('express')
 const mongoose = require('mongoose');
+const path = require('path');
+
 const app = express();
+
 const bodyParser = require('body-parser');
 //los app.use SON MIDDLEWARE, funciones que se disparan con cada peticion que nosotros hagamos
 
 //esto es de la libreria body-parser ...para procesar peticiones xwww-form-urlencode(algo generico)
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json()) 
+
+//haabilitar la carpeta public
+app.use(express.static( path.resolve(__dirname, '../public')));
 
 
 //configuaracion global de rutas
