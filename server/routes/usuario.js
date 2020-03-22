@@ -73,7 +73,8 @@ app.get('/usuario', verificaToken, (req, res) => {
   
     // node-parse es un paquete que permite procesar la info enviada en el formulario 
     // y almacenarla en un objeto Json para que podamos procesarlas en las peticiones POST
-    //el .body es el que va aparecer cuando el body-parse procese cualquier pailot q reciban las peticiones
+    //el .body es el que va aparecer cuando el body-parse procese cualquier pailot q reciban las peticiones,
+    //es el cuerpo de lo que estoy queriendo enviar por POST, es decir lo que quero postear
     let body = req.body;
 
     
